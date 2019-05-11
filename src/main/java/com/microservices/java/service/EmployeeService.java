@@ -35,7 +35,6 @@ public class EmployeeService {
 	public Employee getById(int id) {
 		
 		for(Employee e : employees) {
-			
 			if(e.getId() == id) {
 				return e;
 			}
@@ -43,4 +42,18 @@ public class EmployeeService {
 		return null;
 	}
 	
+	public Employee getByName(String name) {
+			
+			for(Employee e : employees) {
+				if(e.getName() == name) {
+					return e;
+				}
+			}
+			return null;
+		}
+	
+	public boolean addEmployee(Employee e) {
+		List<Employee> employee = employees;
+		return employee.add(e);
+	}
 }
